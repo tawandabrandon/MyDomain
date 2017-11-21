@@ -1,0 +1,49 @@
+<!doctype html>
+<head>
+  {% if homePage == False %}
+  <title>{{info.domain_name}} | MyDomain</title>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+
+  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+  </head>
+  <body>
+  {% endif %}
+  
+
+  {% if homePage %}
+  <title>My Domain</title>
+  <!-- UIKit -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/css/uikit.min.css" />
+
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit-icons.min.js"></script>
+</head>
+<body>
+  <img class="uk-with-auto uk-height-1-1" src="/static/back.png">
+  <header class="uk-position-top">
+    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+          <li class="uk-active"><a href="#">search</a></li>
+          <li><a href="#">Stats</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+    </header>
+    {% endif %}
+
+      {% block body %}{% endblock %}
+  
+    {% if homePage == False %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    {% endif %}
+
+  </body>
